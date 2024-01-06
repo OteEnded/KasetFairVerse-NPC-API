@@ -1,0 +1,42 @@
+/.history
+/config.json
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build files
+dist/
+build/
+out/
+public/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.test
+.env.production
+
+# Testing
+coverage/
+
+# Editor and OS files
+*.swp
+.DS_Store
+Thumbs.db
