@@ -7,8 +7,8 @@ import mongoose from "mongoose"
 import morgan from "morgan"
 import path from "path"
 import { fileURLToPath } from "url"
-import { dialog } from "./data/dialog.js"
-import Question from "./models/question.js"
+// import { dialog } from "./data/dialog.js"
+// import Question from "./models/question.js"
 import apiRoutes from "./routes/api.js"
 
 // Configuration
@@ -37,6 +37,6 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`))
 
     // Add data [MOCK]
-    Question.insertMany(dialog)
+    // Question.insertMany(dialog)
   })
   .catch((e) => console.log(`${e} did not connect`))
