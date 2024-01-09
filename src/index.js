@@ -11,7 +11,6 @@ import { dialog } from './data/dialog.js'
 import Question from './models/question.js'
 import apiRoutes from './routes/api.js'
 import { migrate } from './data/migrate_json.js'
-import { find_closest_question } from './services/index.js'
 
 // Configuration
 const __filename = fileURLToPath(import.meta.url)
@@ -38,7 +37,6 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`))
 
-    find_closest_question('ทำอะไรได้')
     // // Add data [MOCK]
     // Question.insertMany(dialog)
 

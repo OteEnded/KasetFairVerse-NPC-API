@@ -3,14 +3,17 @@ import { getCloseMatches } from 'difflib'
 
 export async function get_all_question() {
   const data = await Question.find()
-  const questions = data.map((item) => item.question)
-  return questions
+  return data
 }
 
-export async function find_closest_question(message) {
+export async function get_answer(message) {
   const questions = await get_all_question()
-  console.log(questions)
-  const closest_question = getCloseMatches(message, questions, 1, 0.7)
-  console.log(closest_question)
-  return closest_question
+  for (const question of questions) {
+    const questionKeyWord = question.questionKeyWord
+    const answer = question.answer
+    const ratio = getCloseMatches(message, questionKeyWord, 1, 0.7)
+    if (ratio.length > 0) {
+      return answer
+    }
+  }
 }
