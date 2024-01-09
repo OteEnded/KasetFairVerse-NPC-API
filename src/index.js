@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url'
 import { dialog } from './data/dialog.js'
 import Question from './models/question.js'
 import apiRoutes from './routes/api.js'
-import { migrate } from './services/migrate_json.js'
+import { migrate } from './data/migrate_json.js'
 
 // Configuration
 const __filename = fileURLToPath(import.meta.url)
