@@ -1,4 +1,4 @@
-import mongoose from "mongoose"
+import mongoose from 'mongoose'
 
 const questionSchema = mongoose.Schema(
   {
@@ -17,9 +17,9 @@ const questionSchema = mongoose.Schema(
       return: true,
     },
   },
-  { timestamps: true },
+  { timestamps: true }
 )
 
-const Question = mongoose.model("Question", questionSchema)
+const Question = mongoose.model('Question', questionSchema)
 
 export default Question
